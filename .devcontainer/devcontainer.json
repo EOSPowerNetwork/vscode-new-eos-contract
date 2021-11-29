@@ -9,6 +9,7 @@
     //  * Replace ${localWorkspaceFolderBasename} with the name of your smart contract project
     "name": "${localWorkspaceFolderBasename}",
     "workspaceMount": "type=volume,src=${localWorkspaceFolderBasename},dst=/root/eos",
+    "mounts": ["source=${localWorkspaceFolder}/artifacts,target=/root/eos/build/artifacts,type=bind"],
     "runArgs": ["--name=${localWorkspaceFolderBasename}"],
 
     ///////////////////////////////////////
